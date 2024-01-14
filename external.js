@@ -41,7 +41,7 @@ function game(){
     let playerWinCount = 0;
     let comWinCount = 0;
 
-    for(let i = 0; i < 5; i++){
+    for(let i = 0; i < 9; i++){
         const playerEntry = prompt('Please enter a choice between Rock, Paper, or Scissors');
         const compEntry = getComputerChoice();
 
@@ -50,16 +50,16 @@ function game(){
         if(result === 'You Win! Paper beats Rock!' || result === 'You Win! Rock beats Scissors!' || result === 'You Win! Scissors beats Paper!'){
             playerWinCount++;
             console.log(result + '\nThe score is: Player: '+playerWinCount+' Computer: '+comWinCount+'');
-            if(playerWinCount === 3){
-                console.log('You Won the best to 5 series!');
+            if(playerWinCount === 5){
+                console.log('You Won the best of 5 series!');
                 break;
             }
         }
         else if(result === 'You Lose! Paper beats Rock!' || result === 'You Lose! Rock beats Scissors' || result === 'You lose! Scissors beats Paper'){
             comWinCount++;
             console.log(result + '\nThe score is: Player: '+playerWinCount+' Computer: '+comWinCount+'');
-            if(comWinCount === 3){
-                console.log('You Lost the best to 5 series!');
+            if(comWinCount === 5){
+                console.log('You Lost the best of 5 series!');
                 break;
             }
         }
@@ -69,8 +69,4 @@ function game(){
         }
         
     }
-        
-    
-
-
 }
